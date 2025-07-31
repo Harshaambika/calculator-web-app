@@ -13,6 +13,8 @@ body {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px #0f3460;
+    width: 300px;
+    max-width: 90vw;
 }
 
 #inputBox {
@@ -25,13 +27,13 @@ body {
     color: #ffffff;
     margin-bottom: 20px;
     text-align: right;
+    box-sizing: border-box;
 }
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(4, 60px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    justify-content: center;
 }
 
 button {
@@ -69,3 +71,26 @@ button:active {
 .clear:hover {
     background-color: #ff1a1a;
 }
+
+/* ✅ Media Query for small screens */
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%;
+        padding: 15px;
+        border-radius: 0;
+        box-shadow: none;
+        height: 100vh;
+        justify-content: center;
+    }
+
+    #inputBox {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 18px;
+    }
+}
+
